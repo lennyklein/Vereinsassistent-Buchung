@@ -38,3 +38,15 @@ Lade das Projekt als ZIP-Datei herunter oder klone es direkt per Git:
 ```bash
 git clone https://github.com/lennyklein/Vereinsassistent-Buchung.git
 cd Vereinsassistent-Buchung
+
+2. Abhängigkeiten installieren
+Stelle sicher, dass Python auf deinem System installiert ist. Öffne dein Terminal im Projektordner und installiere die benötigten Pakete mit folgendem Befehl:
+pip install -r requirements.txt
+
+3. Anwendung starten
+Starte den lokalen Flask-Entwicklungsserver mit dem Befehl:
+python app.py
+
+4. Im Browser öffnen
+Öffne nun deinen bevorzugten Webbrowser und gib folgende Adresse ein, um das Dashboard zu öffnen:
+http://127.0.0.1:5000
