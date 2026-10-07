@@ -23,5 +23,5 @@ Ein moderner, lokaler Web-Buchhaltungsassistent für Vereine und kleine Organisa
 ### 1. Repository klonen oder herunterladen
 Lade das Projekt als ZIP-Datei herunter oder klone es direkt per Git:
 ```bash
-git clone [https://github.com/dein-benutzername/Vereinsassistent-Buchung.git](https://github.com/dein-benutzername/Vereinsassistent-Buchung.git)
+git clone git clone https://github.com/lennyklein/Vereinsassistent-Buchung.git
 cd Vereinsassistent-Buchung
