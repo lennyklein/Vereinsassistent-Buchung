@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="banner.svg" alt="Lenny Klein Banner" width="100%">
+</p>
+
 # 📊 Vereins-Buchhaltungs-Assistent
 
 Ein moderner, lokaler Web-Buchhaltungsassistent für Vereine und kleine Organisationen, entwickelt mit **Flask (Python)**, **SQLite** und einem responsiven **Dark-Themed UI**.
