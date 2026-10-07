@@ -15,6 +15,12 @@ Habt viel Spaß damit! Wenn ihr Fehler findet, Verbesserungsvorschläge habt ode
 
 ---
 
+## ❓ Fragen, Feedback oder Kontakt
+Habt ihr Fragen zum Projekt, Anregungen oder braucht ihr Hilfe bei der Einrichtung? Schreibt mir gerne direkt eine E-Mail an:
+📧 **lennyklein1151.business@gmail.com**
+
+---
+
 ## ✨ Features
 
 * **Transaktions-Erfassung:** Einfaches Buchen von Einnahmen und Ausgaben mit Datum, Zweck, Kategorie und Betrag.
