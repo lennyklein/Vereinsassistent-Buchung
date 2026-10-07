@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Vereins-Buchhaltungs-Assistent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Vereins-Buchhaltungs-Assistent</h1>
+        
+        <!-- Statistik-Boxen oben -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-label">Gesamteinnahmen</span>
+                <span class="stat-value text-success">+{{ "%.2f"|format(gesamteinnahmen) }} €</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Gesamtausgaben</span>
+                <span class="stat-value text-danger">-{{ "%.2f"|format(gesamtausgaben) }} €</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Aktueller Saldo (Gewinn/Verlust)</span>
+                <span class="stat-value {{ 'text-success' if saldo >= 0 else 'text-danger' }}">{{ "%.2f"|format(saldo) }} €</span>
+            </div>
+        </div>
+
+        <!-- Eingabeformular -->
+        <div class="card">
+            <h3>Neue Transaktion erfassen</h3>
+            <form method="POST" action="/add" class="form-grid">
+                <div class="form-group">
+                    <label>Datum</label>
+                    <input type="date" name="datum" required>
+                </div>
+                <div class="form-group">
+                    <label>Zweck / Beschreibung</label>
+                    <input type="text" name="zweck" placeholder="z.B. Mitgliedsbeitrag" required>
+                </div>
+                <div class="form-group">
+                    <label>Kategorie</label>
+                    <select name="kategorie">
+                        <option value="Mitgliedsbeitrag">Mitgliedsbeitrag</option>
+                        <option value="Veranstaltung">Veranstaltung</option>
+                        <option value="Ausgabe / Material">Ausgabe / Material</option>
+                        <option value="Sonstiges">Sonstiges</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Betrag (€)</label>
+                    <input type="number" step="0.01" name="betrag" placeholder="0.00" required>
+                </div>
+                <div class="form-group">
+                    <label>Typ</label>
+                    <select name="typ">
+                        <option value="Einnahme">Einnahme (+)</option>
+                        <option value="Ausgabe">Ausgabe (-)</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Eintragen & Speichern</button>
+                    <a href="/export" class="btn btn-success">📥 Rohdaten für Steuerberater (CSV)</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Tabelle der Transaktionen -->
+        <div class="card">
+            <div class="table-header-flex">
+                <h3>Alle Buchungen</h3>
+                <form action="/clear" method="POST" onsubmit="return confirm('Achtung! Wirklich ALLE Buchungen unwiderruflich löschen? Das Konto wird auf 0 gesetzt.');">
+                    <button type="submit" class="btn btn-danger">🗑️ Alle Buchungen löschen</button>
+                </form>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Zweck</th>
+                        <th>Kategorie</th>
+                        <th>Typ</th>
+                        <th>Betrag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in transaktionen %}
+                    <tr>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td class="{{ 'text-success' if row[5] == 'Einnahme' else 'text-danger' }}">{{ row[5] }}</td>
+                        <td>{{ "%.2f"|format(row[4]) }} €</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
