@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.svg" alt="Lenny Klein Banner" width="100%">
+  <img src="https://raw.githubusercontent.com/lennyklein/lennyklein/refs/heads/main/assets/banner.svg" alt="Lenny Klein Banner" width="100%">
 </p>
 
 # 📊 Vereins-Buchhaltungs-Assistent
