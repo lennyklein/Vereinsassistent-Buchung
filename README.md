@@ -8,6 +8,13 @@ Ein moderner, lokaler Web-Buchhaltungsassistent für Vereine und kleine Organisa
 
 ---
 
+## 🎉 Open Source & Mithelfen
+Dieses Projekt ist **Open Source**! Das bedeutet, jeder kann den Code frei nutzen, anpassen oder erweitern. 
+
+Habt viel Spaß damit! Wenn ihr Fehler findet, Verbesserungsvorschläge habt oder das Projekt um neue Features erweitern wollt, seid ihr herzlich eingeladen mitzuhelfen. Erstellt dazu einfach einen *Pull Request* oder öffnet ein *Issue* im Repository.
+
+---
+
 ## ✨ Features
 
 * **Transaktions-Erfassung:** Einfaches Buchen von Einnahmen und Ausgaben mit Datum, Zweck, Kategorie und Betrag.
@@ -23,5 +30,5 @@ Ein moderner, lokaler Web-Buchhaltungsassistent für Vereine und kleine Organisa
 ### 1. Repository klonen oder herunterladen
 Lade das Projekt als ZIP-Datei herunter oder klone es direkt per Git:
 ```bash
-git clone git clone https://github.com/lennyklein/Vereinsassistent-Buchung.git
+git clone https://github.com/lennyklein/Vereinsassistent-Buchung.git
 cd Vereinsassistent-Buchung
